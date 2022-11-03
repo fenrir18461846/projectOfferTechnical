@@ -15,7 +15,7 @@ import com.af.fr.projectOfferTechnical.service.UserService;
 
 @CrossOrigin(origins = "http://192.168.56.1:4200" )
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/users")
 public class UserResource {
 	
 	private final UserService userService;
