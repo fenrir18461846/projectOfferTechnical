@@ -10,7 +10,7 @@ import javax.persistence.Id;
 
 import lombok.NoArgsConstructor;
 
-@Entity(name = "user")
+@Entity(name = "users")
 @NoArgsConstructor
 public class User {
 		
