@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.af.fr.projectOfferTechnical.model.User;
 import com.af.fr.projectOfferTechnical.service.UserService;
 
-@CrossOrigin(origins = "http://192.168.56.1:4200")
+@CrossOrigin(origins = "http://192.168.56.1:4200" )
 @RestController
 @RequestMapping("/user")
 public class UserResource {
