@@ -10,9 +10,9 @@
 	</parent>
 	<groupId>com.af.fr</groupId>
 	<artifactId>projectOfferTechnical</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1-SNAPSHOT</version> 
 	<name>projectOfferTechnical</name>
-	<description>The project Offer Technical Test to test user registrations </description>
+	<description>The project Offer Technical Test to test user registrations</description>
 	<properties>
 		<java.version>11</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
