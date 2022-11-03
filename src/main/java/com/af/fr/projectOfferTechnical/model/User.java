@@ -1,7 +1,5 @@
 package com.af.fr.projectOfferTechnical.model;
 
-import static com.af.fr.projectOfferTechnical.resource.StaticElements.USER;
-
 import java.util.Date;
 
 import javax.persistence.Column;
