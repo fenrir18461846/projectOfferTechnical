@@ -13,7 +13,7 @@ import com.af.fr.projectOfferTechnical.repo.UserRepo;
 @Transactional
 public class UserService {
 	
-	private final UserRepo userRepo;
+	public final UserRepo userRepo;
 
 	@Autowired
 	public UserService(UserRepo userRepo) {
