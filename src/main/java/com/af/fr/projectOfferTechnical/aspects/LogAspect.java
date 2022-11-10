@@ -21,10 +21,13 @@ public class LogAspect {
 	
 	private Logger logger = Logger.getLogger(this.getClass().getName());
 	
-	@Pointcut("execution(* com.af.fr.projectOfferTechnical.service.*.*(..))")
-	public void log() {}
+	@Pointcut("execution(* com.af.fr.projectOfferTechnical.service.UserService.findUserById(..))")
+	public void logFindUserById() {}
 	
-	@Around("log()")
+	@Pointcut("execution(* com.af.fr.projectOfferTechnical.service.UserService.logAddUser(..))")
+	public void logAddUser() {}
+	
+	@Around("logFindUserById(),logAddUser()")
 	public void aroundMethod(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
 		System.out.println("--------------------------------------------------------");
 		logger.info("Before the method " + proceedingJoinPoint.getSignature().getName() + " starts. (Signature : " + proceedingJoinPoint.getSignature() + ")");
