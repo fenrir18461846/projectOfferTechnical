@@ -74,8 +74,8 @@
     		<groupId>org.apache.commons</groupId>
     		<artifactId>commons-lang3</artifactId>
 		</dependency>
-	</dependencies>
 
+	</dependencies>
 	<build>
 		<plugins>
 			<plugin>
