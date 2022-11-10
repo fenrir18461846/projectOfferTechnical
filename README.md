@@ -4,12 +4,17 @@ The project Offer Technical Test to test user registrations
 # Documentation Notion
 Link of Notion : https://www.notion.so/OfferTechnicalTest-99cf6f7d97a94df2989f87d9b478fdb6
 
-# JPA
+# Build
+mvn clean
+mvn install
 
+# Launch application
+mvn spring-boot:run
+
+# JPA
 Dialect = org.hibernate.dialect.H2Dialect
 
 # H2
-
 Url = jdbc:h2:file:./src/main/resources/db/db_project_offer_technical
 
 Driver Class Name = org.h2.Driver
