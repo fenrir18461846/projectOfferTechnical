@@ -6,6 +6,7 @@ Link of Notion : https://www.notion.so/OfferTechnicalTest-99cf6f7d97a94df2989f87
 
 # Build
 mvn clean
+
 mvn install
 
 # Launch application
