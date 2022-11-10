@@ -2,7 +2,7 @@
 The project Offer Technical Test to test user registrations
 
 # Documentation Notion
-The link : https://www.notion.so/OfferTechnicalTest-99cf6f7d97a94df2989f87d9b478fdb6
+Link of Notion : https://www.notion.so/OfferTechnicalTest-99cf6f7d97a94df2989f87d9b478fdb6
 
 # JPA
 
@@ -19,5 +19,5 @@ Path = /h2
 Port = 8090
 
 # Postman
-The link of the requests : https://web.postman.co/workspace/My-Workspace~5557faf9-ce1a-425d-8d2f-f7fb3055e5d1/request/24352923-0bc89e90-9f26-4bed-8492-8cd2e1054b51
+Link of requests : https://web.postman.co/workspace/My-Workspace~5557faf9-ce1a-425d-8d2f-f7fb3055e5d1/request/24352923-0bc89e90-9f26-4bed-8492-8cd2e1054b51
 
