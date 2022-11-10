@@ -11,11 +11,17 @@ Dialect = org.hibernate.dialect.H2Dialect
 # H2
 
 Url = jdbc:h2:file:./src/main/resources/db/db_project_offer_technical
+
 Driver Class Name = org.h2.Driver
+
 Username = utilisateur
+
 Password = FB~p>2@z65srZ2X*
+
 Database-platform = org.hibernate.dialect.H2Dialect
+
 Path = /h2
+
 Port = 8090
 
 # Postman
