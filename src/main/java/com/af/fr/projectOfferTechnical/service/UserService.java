@@ -20,11 +20,13 @@ public class UserService {
 		this.userRepo = userRepo;
 	}
 	
-	public User findUserById( Long id ) {
+	public User findUserById( Long idUser ) {
 		
-		return userRepo.findUserById( id )
-				.orElseThrow( () -> new UserNotFoundException( "User by id " + id + " was not found ! ") );
-			
+		User user = userRepo.findById( idUser )
+				.orElseThrow( () -> new UserNotFoundException( "User by id " + idUser + " was not found ! ") );
+		
+		return user;
+				
 	}
 	
 	public User addUser( User user ) {

@@ -8,7 +8,7 @@ import com.af.fr.projectOfferTechnical.model.User;
 
 public interface UserRepo extends JpaRepository<User, Long>{
 	
-	Optional<User> findUserById(Long id);
+	Optional<User> findById(Long idUser);
 	
 }
 

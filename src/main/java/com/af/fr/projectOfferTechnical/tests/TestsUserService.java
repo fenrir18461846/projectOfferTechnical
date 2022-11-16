@@ -1,6 +1,5 @@
 package com.af.fr.projectOfferTechnical.tests;
 
-import java.util.Date;
 import java.util.logging.Logger;
 
 import org.aspectj.lang.annotation.Aspect;
@@ -47,15 +46,15 @@ public class TestsUserService {
 		
 		User user = (User) args[0];
 		
-		if((new Date().getYear() - user.getBirthdate().getYear()) < 18 ) {
+		if( Tests.testLegalAge( user.getBirthdate() ) ) {
 			throw new Exception("Stop");
 		}
 		
-		if(user.getCountryOfResidence() != "FRANCE") {
+		if( Tests.testCountryOfResidence( user.getCountryOfResidence() ) ) {
 			throw new Exception("Stop");
 		}
 		
 		System.out.println("--------------------------------------------------------");
-		
 	}
 }
+

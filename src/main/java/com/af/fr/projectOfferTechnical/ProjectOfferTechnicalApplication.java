@@ -3,6 +3,10 @@ package com.af.fr.projectOfferTechnical;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * Launch application
+ * @author escan
+ */
 @SpringBootApplication
 public class ProjectOfferTechnicalApplication {
 
@@ -10,6 +14,5 @@ public class ProjectOfferTechnicalApplication {
 		
 		SpringApplication.run(ProjectOfferTechnicalApplication.class, args);
 	}
-	
 }
 

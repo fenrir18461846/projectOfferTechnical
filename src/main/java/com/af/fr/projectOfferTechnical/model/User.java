@@ -1,5 +1,9 @@
 package com.af.fr.projectOfferTechnical.model;
 
+import static com.af.fr.projectOfferTechnical.common.CommonUtility.ID_GENDER_DB;
+import static com.af.fr.projectOfferTechnical.common.CommonUtility.ID_USER_DB;
+import static com.af.fr.projectOfferTechnical.common.CommonUtility.TABLES_USERS_DB;
+
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -7,100 +11,46 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import org.apache.commons.lang3.builder.ToStringBuilder;
-import org.apache.commons.lang3.builder.ToStringStyle;
-
-@Entity(name = "users")
+@Data
 @NoArgsConstructor
+@AllArgsConstructor
+@Entity(name = TABLES_USERS_DB)
+@Builder
 public class User {
 		
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(nullable = false, updatable = false)
-	private Long id;
+	@Column(name = ID_USER_DB, nullable = false, updatable = false)
+	private Long idUser;
 	private String userName;
-	//Retransformer la date String -> Date ?
 	private Date birthdate;
 	private String countryOfResidence;
 	
-	//Not required
-	//Faire un test de validation
-	private String phoneNumber = "";
-	//Faire un test de validation
-	//Initiated in 3 = uninformed
-	private int genderId = 3;
+	//---Not required---//
+	private String phoneNumber;
 	
-	public User(Long id, String userName, Date birthdate, String countryOfResidence, String phoneNumber, int genderId) {
-		this.id = id;
-		this.userName = userName;
-		this.birthdate = birthdate;
-		this.countryOfResidence = countryOfResidence;
-		this.phoneNumber = phoneNumber;
-		this.genderId = genderId;
-	}
+	@OneToOne
+	@JoinColumn(name=ID_GENDER_DB, nullable = false, updatable = false)
+	private Gender gender;
 	
 	//Constructor User without field not required
-	public User(Long id, String userName, Date birthdate, String countryOfResidence) {
-		this.id = id;
+	public User(Long idUser, String userName, Date birthdate, String countryOfResidence) {
+		this.idUser = idUser;
 		this.userName = userName;
 		this.birthdate = birthdate;
 		this.countryOfResidence = countryOfResidence;
+		this.phoneNumber = "";
+		// 'O' to 'other'
+		this.gender = new Gender( Long.valueOf(3), 'O' );
 	}
-	
-	@Override
-	public String toString() {
-		return ToStringBuilder.reflectionToString(this, ToStringStyle.SHORT_PREFIX_STYLE);
-	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getUserName() {
-		return userName;
-	}
-
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
-
-	public Date getBirthdate() {
-		return birthdate;
-	}
-
-	public void setBirthdate(Date birthdate) {
-		this.birthdate = birthdate;
-	}
-
-	public String getCountryOfResidence() {
-		return countryOfResidence;
-	}
-
-	public void setCountryOfResidence(String countryOfResidence) {
-		this.countryOfResidence = countryOfResidence;
-	}
-
-	public String getPhoneNumber() {
-		return phoneNumber;
-	}
-
-	public void setPhoneNumber(String phoneNumber) {
-		this.phoneNumber = phoneNumber;
-	}
-
-	public int getGenderId() {
-		return genderId;
-	}
-
-	public void setGenderId(int genderId) {
-		this.genderId = genderId;
-	}
-
 }
+
+

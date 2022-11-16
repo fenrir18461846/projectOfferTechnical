@@ -68,12 +68,6 @@
     		<groupId>org.aspectj</groupId>
     		<artifactId>aspectjweaver</artifactId>
 		</dependency>
-		
-		<!-- Useful to have a good description of java classes -->
-		<dependency>
-    		<groupId>org.apache.commons</groupId>
-    		<artifactId>commons-lang3</artifactId>
-		</dependency>
 
 	</dependencies>
 	<build>
